@@ -1,0 +1,739 @@
+<!-- TABS NAV ####################################################################################################################### -->
+<div class="steely-ebsco-form desktop">
+  <script type="text/javascript"
+    src="https://imageserver.ebscohost.com/branding/tabbedsearch/js/FormProcessing.js"></script>
+
+  <ul class="nku-tabs-nav-grey" role="tablist">
+    <li title="Search All" role="tab" aria-controls="nav-tab4" id="steely-nav-tab4" aria-selected="false"><a
+        href="#nav-tab4"><strong> All Resources </strong></a></li>
+    <li title="Search for Articles and more" role="tab" aria-controls="nav-tab1" id="steely-nav-tab1"
+      aria-selected="true"><a href="#nav-tab1"><strong> Articles </strong> </a></li>
+    <li title="Search for Books" role="tab" aria-controls="nav-tab2" id="steely-nav-tab2" aria-selected="false"><a
+        href="#nav-tab2"><strong> Books &amp; Media </strong></a></li>
+    <li title="Search for Journals" role="tab" aria-controls="nav-tab3" id="steely-nav-tab3" aria-selected="false"><a
+        href="#nav-tab3"><strong> Journals </strong></a></li>
+    <li title="Search for Journals" role="tab" aria-controls="nav-tab5" id="steely-nav-tab5" aria-selected="false"><a
+        href="#nav-tab5"><strong> Steely Site Search </strong></a></li>
+  </ul>
+
+  <div class="nku-tabs-content-grey">
+    <!-- TAB4 EDS Beta ########################################################################################################## -->
+    <div class="nav-tab4" id="nav-tab4" role="tabpanel" aria-labelledby="steely-nav-tab4" aria-hidden="true">
+
+      <script src="https://support.ebsco.com/eit/scripts/ebscohostsearch.js" type="text/javascript"></script>
+      <form class="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post"
+        style="overflow:hidden;">
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">Beta All</legend>
+            <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+            <input id="ebscohosturl" name="ebscohosturl" type="hidden"
+              value="https://search.ebscohost.com/login.aspx?direct=true&scope=site&type=0&site=eds-live&custid=s8992667&groupid=main&profid=eds-sb-all&lang=en&authtype=ip,sso" />
+            <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+            <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
+            <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+
+            <div>
+              <div>
+                <span class="steely-eds-labels visuallyhidden">
+                  <label for="ebscohostsearchtext" class="steely-ebsco-label2">Search articles, books, and more </label>
+                </span>
+
+                <div class="search-input-wrapper">
+                  <div class="select-wrapper">
+                    <select onchange="#" size="1" name="search_prefix" id="all_searchtype">
+                      <option selected="selected" value="">By Keyword</option>
+                      <option value="TI ">By Title</option>
+                      <option value="AU ">By Author</option>
+                    </select>
+                  </div>
+                  <input id="ebscohostsearchtext" name="ebscohostsearchtext" type="text" size="30"
+                    placeholder="Find articles, books, media, journals and more" />
+                  <input type="submit" value="Search" class="ebscohost-search-button" onclick="addLimit();" />
+                </div>
+
+              </div>
+            </div>
+            <ul class="steely-searchbox-links">
+
+              <li>
+                <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s8992667&groupid=main&profid=eds-sb-all&mode=and&lang=en&authtype=ip,guest">Guest</a></span>
+              </li>
+              <li> <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=eds-sb-all&amp;mode=and&amp;lang=en&amp;authtype=ip,sso">Advanced</a></span>
+              </li>
+
+            </ul>
+          </fieldset>
+        </div>
+      </form>
+
+    </div>
+    <!-- TAB1 ARTICLES Plus ########################################################################################################## -->
+    <div class="nav-tab1" id="nav-tab1" role="tabpanel" aria-labelledby="steely-nav-tab1" aria-hidden="false">
+      <form class="steely-external" action="https://search.ebscohost.com/login.aspx" method="get" target="_blank"
+        onsubmit="ebscoPreProcess(this)">
+
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">Articles</legend>
+            <!-- Dropdown menu to prepend the selected value below to the user's search term -->
+            <!-- select onchange="#" size="1" name="search_prefix">
+					<option selected="selected" value="">keyword</option>
+					<option value="TI ">title</option>
+					<option value="AU ">author</option>
+				</select -->
+            <input name="direct" value="true" type="hidden">
+            <input name="scope" value="site" type="hidden">
+            <!-- target an EDS profile -->
+            <input name="site" value="eds-live" type="hidden">
+            <input name="profile" value="eds" type="hidden">
+            <!-- Auth type -->
+            <input name="authtype" value="ip,sso" type="hidden">
+            <input name="custid" value="s8992667" type="hidden">
+            <input name="groupid" value="main" type="hidden">
+            <!-- search box and submit button -->
+            <input name="type" value="0" type="hidden"> <!-- basic = 0, advanced = 1, delete line = advanced -->
+            <input name="bquery" value="" type="hidden">
+            <span class="steely-eds-labels visuallyhidden">
+              <label for="ebsco_articles_searchbox" class="steely-ebsco-label2">Search articles+</label>
+            </span>
+
+            <div class="search-input-wrapper">
+              <div class="select-wrapper">
+
+                <select onchange="#" size="1" name="search_prefix" id="article_searchtype">
+                  <option selected="selected" value="">By Keyword</option>
+                  <option value="TI ">By Title</option>
+                  <option value="AU ">By Author</option>
+                </select>
+              </div>
+              <input name="uquery" size="30" id="ebsco_articles_searchbox" type="text" placeholder="Find articles">
+              <input value="Search" type="submit">
+            </div>
+
+            <!-- Limiter Check Boxes: To display, adjust the html comment tags at desired locations -->
+            <!-- Limiter: Full Text -->
+            <!-- <input name="cli0" value="FT" type="hidden">
+            <input name="clv0" type="hidden" value="N"><br>
+            <input type="checkbox" name="fulltext_checkbox" id="fulltext_checkbox_all"
+              onclick="limittoFullText(this.form)">
+            <label for="fulltext_checkbox_all" class="steely-ebsco-label"><span title="limit to full text online">Full
+                Text</span></label> -->
+            <!-- span style="display:none;" --><span>
+              <!-- Limiter: Scholarly/Peer-Reviewed -->
+              <!-- <input name="cli1" value="RV" type="hidden">
+              <input name="clv1" type="hidden" value="N">
+              <input name="scholarly_checkbox" id="scholarly_checkbox_articles" onclick="limittoScholarly(this.form)"
+                type="checkbox">
+              <label for="scholarly_checkbox_articles" class="steely-ebsco-label"><span
+                  title="limit to peer reviewed items">scholarly</span></label> -->
+            </span>
+            <span style="display:none;">
+              <!-- Limiter: Available in Library Collection -->
+              <input name="cli4" value="FT1" type="hidden">
+              <input name="clv4" type="hidden" value="Y">
+              <input type="checkbox" name="ailc_checkbox" id="ailc_articles_checkbox_all"
+                onclick="limittoAiLC(this.form)">
+              <label for="ailc_articles_checkbox_all" class="steely-ebsco-label"><span
+                  title="limit to Steely Library's holdings">at Steely</span></label>
+            </span>
+
+            <!-- Limiter: Catalog Only -->
+            <span style="display:none;">
+              <input name="cli2" value="FC" type="hidden"><input name="clv2" type="hidden" value="N">
+              <input name="catalog_only_checkbox" id="catalog_only_checkbox" onclick="limittoCatalog(this.form)"
+                type="checkbox">
+              <label for="catalog_only_checkbox" class="steely-ebsco-label"><span
+                  title="limit to Steely Library's catalog">catalog only</span></label>
+            </span>
+            <!-- Limiter: Institutional Repositories Only -->
+            <span style="display:none">
+              <input name="cli3" value="FC1" type="hidden">
+              <input name="clv3" type="hidden" value="N">
+              <input name="IR_only_checkbox" id="IR_only_checkbox" onclick="limittoIR(this.form)" type="checkbox">
+              <label for="IR_only_checkbox" class="steely-ebsco-label"><span title="limit to Steely's IR">IR
+                  only</span></label>
+            </span>
+            <ul class="steely-searchbox-links">
+
+              <!-- span class="steely-ebsco-advanced"><a class="steely-external" target="_blank" href="http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=edsbooks&amp;mode=and&amp;lang=en&amp;authtype=guest">Guest</a></span -->
+
+              <li> <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s8992667&groupid=main&profid=eds&mode=and&lang=en&authtype=ip,guest">Guest</a></span>
+              </li>
+              <li> <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=eds&amp;mode=and&amp;lang=en&amp;authtype=ip,sso">Advanced</a></span>
+              </li>
+
+            </ul>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
+    <!-- TAB2 BOOKS ########################################################################################################## -->
+
+    <div class="nav-tab2" id="nav-tab2" role="tabpanel" aria-labelledby="steely-nav-tab2" aria-hidden="true">
+      <form class="steely-external" action="https://search.ebscohost.com/login.aspx" method="get" target="_blank"
+        onsubmit="ebscoPreProcess(this)">
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">Books &amp; Media</legend>
+            <!-- Dropdown menu to prepend the selected value below to the user's search term -->
+            <!-- select onchange="#" size="1" name="search_prefix">
+					<option selected="selected" value="">keyword</option>
+					<option value="TI ">title</option>
+					<option value="AU ">author</option>
+				</select -->
+            <input name="direct" value="true" type="hidden">
+            <input name="scope" value="site" type="hidden">
+            <!-- target an EDS profile -->
+            <input name="site" value="eds-live" type="hidden">
+            <input name="profile" value="edsbooks" type="hidden">
+            <!-- Auth type -->
+            <input name="authtype" value="ip,sso" type="hidden">
+            <input name="custid" value="s8992667" type="hidden">
+            <input name="groupid" value="main" type="hidden">
+            <!-- search box and submit button -->
+
+            <input name="type" value="0" type="hidden"> <!-- basic = 0, advanced = 1, delete line = advanced -->
+
+            <input name="bquery" value="" type="hidden">
+            <span class="steely-eds-labels visuallyhidden">
+              <label for="ebsco_books_searchbox" class="steely-ebsco-label2">Search articles</label>
+            </span>
+
+            <div class="search-input-wrapper">
+              <div class="select-wrapper">
+
+                <select onchange="#" size="1" name="search_prefix" id="book_searchtype">
+                  <option selected="selected" value="">By Keyword</option>
+                  <option value="TI ">By Title</option>
+                  <option value="AU ">By Author</option>
+                </select>
+              </div>
+              <input name="uquery" size="30" id="ebsco_books_searchbox" type="text" placeholder="Find books and media">
+              <input value="Search" type="submit">
+            </div>
+
+
+            <span class="steely-eds-labels">
+              <label for="book_searchtype" class="steely-ebsco-label2">Search books by:</label>
+            </span>
+
+
+            <!-- Limiter Check Boxes: To display, adjust the html comment tags at desired locations -->
+            <span style="display:none;">
+              <!-- Limiter: Full Text -->
+              <input name="cli0" value="FT" type="hidden">
+              <input name="clv0" type="hidden" value="N">
+              <!-- input type="checkbox" name="fulltext_checkbox" id="fulltext_checkbox_all" onclick="limittoFullText(this.form)" -->
+              <!-- label for="fulltext_checkbox_all" class="steely-ebsco-label">full text</label -->
+
+              <!-- Limiter: Available in Library Collection -->
+              <input name="cli4" value="FT1" type="hidden">
+              <input name="clv4" type="hidden" value="N">
+              <input type="checkbox" name="ailc_checkbox" id="ailc_checkbox_all" onclick="limittoAiLC(this.form)">
+              <label for="ailc_checkbox_all" class="steely-ebsco-label">at Steely</label>
+
+              <!-- Limiter: Scholarly/Peer-Reviewed -->
+              <input name="cli1" value="RV" type="hidden">
+              <input name="clv1" type="hidden" value="N">
+              <input name="scholarly_checkbox" id="scholarly_checkbox_books" onclick="limittoScholarly(this.form)"
+                type="checkbox">
+              <label for="scholarly_checkbox_books" class="steely-ebsco-label"><span
+                  title="Peer-Reviewed">scholarly</span></label>
+            </span>
+            <!-- Limiter: Catalog Only -->
+            <span style="display:none">
+              <input name="cli2" value="FC" type="hidden">
+              <input name="clv2" type="hidden" value="N">
+              <input name="catalog_only_checkbox" id="catalog_books_only_checkbox" onclick="limittoCatalog(this.form)"
+                type="checkbox">
+              <label for="catalog_books_only_checkbox" class="steely-ebsco-label">catalog only</label>
+            </span>
+            <!-- Limiter: Institutional Repositories Only -->
+            <span style="display:none">
+              <input name="cli3" value="FC1" type="hidden">
+              <input name="clv3" type="hidden" value="N">
+              <input name="IR_only_checkbox" id="IR_book_only_checkbox" onclick="limittoIR(this.form)" type="checkbox">
+              <label for="IR_book_only_checkbox" class="steely-ebsco-label">institutional repository only</label>
+            </span>
+            <ul class="steely-searchbox-links">
+              <!-- <li> <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank" href="http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=edsbooks&amp;mode=and&amp;lang=en&amp;authtype=guest">visitors</a></span> </li> -->
+              <li> <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s8992667&groupid=main&profid=edsbooks&mode=and&lang=en&authtype=ip,guest">Guest</a></span>
+              </li>
+              <li> <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank"
+                    href="
+			https://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=edsbooks&amp;mode=and&amp;lang=en&amp;authtype=ip,sso">advanced
+                  </a></span> </li>
+
+            </ul>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
+    <!-- TAB3 Journals ########################################################################################################## -->
+    <div class="nav-tab3" id="nav-tab3" role="tabpanel" aria-labelledby="steely-nav-tab3" aria-hidden="true">
+      <form class="steely-external" action="https://search.ebscohost.com/login.aspx" method="get" target="_blank"
+        onsubmit="ebscoPreProcess(this)">
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">eJournal Titles</legend>
+            <!-- Dropdown menu to prepend the selected value below to the user's search term -->
+            <!-- select onchange=" #" size="1" name="search_prefix">
+              <option selected="selected" value="">keyword</option>
+              <option value="SO ">title</option>
+              <option value="IS ">issn</option>
+              <option value="IB ">isbn</option>
+              </select -->
+            <input name="direct" value="true" type="hidden">
+            <input name="scope" value="site" type="hidden">
+            <!-- input name="mode" value="bool" type="hidden" -->
+            <input name="type" value="44" type="hidden">
+            <!-- target an EDS profile -->
+            <input name="site" value="pfi-live" type="hidden">
+            <input name="profile" value="eds" type="hidden">
+            <!-- input name="plp" value="1" type="hidden" -->
+            <input name="db" value="edspub" type="hidden">
+            <!-- Auth type -->
+            <input name="authtype" value="ip,sso" type="hidden">
+            <input name="custid" value="s8992667" type="hidden">
+            <input name="groupid" value="main" type="hidden">
+            <input name="ssl" value="Y" type="hidden">
+            <!-- search box and submit button -->
+            <input name="bquery" value="" type="hidden">
+            <span class="steely-eds-labels visuallyhidden">
+              <label for="ebsco_journals_searchbox" class="steely-ebsco-label2">Search ejournals</label>
+            </span>
+            <span class="steely-eds-labels visuallyhidden">
+              <label for="journal_searchtype" class="steely-ebsco-label2">Search ejournals by:</label>
+            </span>
+
+            <div class="search-input-wrapper">
+              <div class="select-wrapper">
+
+                <select onchange="#" size="1" name="search_prefix" id="journal_searchtype">
+                  <option selected="selected" value="">By Keyword</option>
+                  <option value="SO ">By Title</option>
+                  <option value="IS ">By ISSN</option>
+                  <option value="IB ">By ISBN</option>
+                </select>
+              </div>
+              <input name="uquery" size="30" id="ebsco_journals_searchbox" type="text" placeholder="Find journals">
+              <input value="Search" type="submit">
+            </div>
+
+
+
+            <ul class="steely-searchbox-links">
+              <li> <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank"
+                    href=" https://search.ebscohost.com/login.aspx?authtype=ip,guest&custid=s8992667&groupid=main&direct=true&db=edspub&profile=eds&plp=1">Guest</a></span>
+              </li>
+              <!-- li> <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank" href="http://search.ebscohost.com/login.aspx?profile=pfi&amp;authtype=ip,guest">Advanced</a></span> </li -->
+              <!-- <li> <span class="steely-ebsco-advanced"><a class="steely-external" target="_blank" href="http://proxy1.nku.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profile=pfi&amp;mode=and&amp;lang=en&amp;authtype=ip,guest">Advanced</a></span> </li> -->
+
+            </ul>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+    <!-- TAB5 Journals ########################################################################################################## -->
+    <div class="nav-tab5" id="nav-tab5" role="tabpanel" aria-labelledby="steely-nav-tab5" aria-hidden="true">
+      <form class="steely-external" action="/library-new/search.html">
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">Steely Site Search</legend>
+            <div class="search-input-wrapper">
+              <input name="q" size="30" id="ebsco_journals_searchbox" type="text" placeholder="Search Steely">
+              <input value="Search" type="submit">
+            </div>
+
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+<!-- TABS END ########################################################################################################-->
+<!-- TABS NAV ####################################################################################################################### -->
+<div class="steely-ebsco-form mobile">
+  <script type="text/javascript"
+    src="https://imageserver.ebscohost.com/branding/tabbedsearch/js/FormProcessing.js"></script>
+
+  <div id="mobile-search-select" class="mobile-search-select">
+    <select>
+      <option value="mobile-nav-tab4">All Resources</option>
+      <option value="mobile-nav-tab1">Articles</option>
+      <option value="mobile-nav-tab2">Books &amp; Media</option>
+      <option value="mobile-nav-tab3">Journals</option>
+      <option value="mobile-nav-tab5">Steely Site Search</option>
+    </select>
+
+  </div>
+
+  <div class="mobile-search-forms">
+    <!-- TAB4 EDS Beta ########################################################################################################## -->
+    <div class="mobile-search-form nav-tab4" id="mobile-nav-tab4" role="tabpanel" aria-labelledby="steely-nav-tab4" aria-hidden="true">
+
+      <script src="https://support.ebsco.com/eit/scripts/ebscohostsearch.js" type="text/javascript"></script>
+      <form class="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post"
+        style="overflow:hidden;">
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">Beta All</legend>
+            <input id="mobile-ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+            <input id="mobile-ebscohosturl" name="ebscohosturl" type="hidden"
+              value="https://search.ebscohost.com/login.aspx?direct=true&scope=site&type=0&site=eds-live&custid=s8992667&groupid=main&profid=eds-sb-all&lang=en&authtype=ip,sso" />
+            <input id="mobile-ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+            <input id="mobile-ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
+            <input id="mobile-ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+
+            <div>
+              <div>
+                <span class="steely-eds-labels visuallyhidden">
+                  <label for="ebscohostsearchtext" class="steely-ebsco-label2">Search articles, books, and more </label>
+                </span>
+
+                <div class="search-input-wrapper">
+                  <div class="select-wrapper">
+
+                    <select onchange="#" size="1" name="search_prefix" id="mobile-all_searchtype">
+                      <option selected="selected" value="">By Keyword</option>
+                      <option value="TI ">By Title</option>
+                      <option value="AU ">By Author</option>
+                    </select>
+                  </div>
+                  <input id="mobile-ebscohostsearchtext" name="ebscohostsearchtext" type="text" size="30"
+                    placeholder="Find articles, books, media, journals..." />
+                  <input type="submit" value="Search" class="ebscohost-search-button" onclick="addLimit();" />
+                </div>
+
+              </div>
+            </div>
+            <ul class="steely-searchbox-links-mobile">
+              <li> <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=eds-sb-all&amp;mode=and&amp;lang=en&amp;authtype=ip,sso">Advanced</a></span>
+              </li>
+              <li>
+                <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s8992667&groupid=main&profid=eds-sb-all&mode=and&lang=en&authtype=ip,guest">Guest</a></span>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </form>
+
+    </div>
+    <!-- TAB1 ARTICLES Plus ########################################################################################################## -->
+    <div class="nav-tab1 mobile-search-form hidden" id="mobile-nav-tab1" role="tabpanel" aria-labelledby="steely-nav-tab1" aria-hidden="false">
+      <form class="steely-external" action="https://search.ebscohost.com/login.aspx" method="get" target="_blank"
+        onsubmit="ebscoPreProcess(this)">
+
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">Articles</legend>
+            <!-- Dropdown menu to prepend the selected value below to the user's search term -->
+            <!-- select onchange="#" size="1" name="search_prefix">
+					<option selected="selected" value="">keyword</option>
+					<option value="TI ">title</option>
+					<option value="AU ">author</option>
+				</select -->
+            <input name="direct" value="true" type="hidden">
+            <input name="scope" value="site" type="hidden">
+            <!-- target an EDS profile -->
+            <input name="site" value="eds-live" type="hidden">
+            <input name="profile" value="eds" type="hidden">
+            <!-- Auth type -->
+            <input name="authtype" value="ip,sso" type="hidden">
+            <input name="custid" value="s8992667" type="hidden">
+            <input name="groupid" value="main" type="hidden">
+            <!-- search box and submit button -->
+            <input name="type" value="0" type="hidden"> <!-- basic = 0, advanced = 1, delete line = advanced -->
+            <input name="bquery" value="" type="hidden">
+            <span class="steely-eds-labels visuallyhidden">
+              <label for="ebsco_articles_searchbox" class="steely-ebsco-label2">Search articles+</label>
+            </span>
+
+            <div class="search-input-wrapper">
+              <div class="select-wrapper">
+
+                <select onchange="#" size="1" name="search_prefix" id="mobile-article_searchtype">
+                  <option selected="selected" value="">By Keyword</option>
+                  <option value="TI ">By Title</option>
+                  <option value="AU ">By Author</option>
+                </select>
+              </div>
+              <input name="uquery" size="30" id="mobile-ebsco_articles_searchbox" type="text"
+                placeholder="Find articles">
+              <input value="Search" type="submit">
+            </div>
+
+            <!-- Limiter Check Boxes: To display, adjust the html comment tags at desired locations -->
+            <!-- Limiter: Full Text -->
+            <!-- <input name="cli0" value="FT" type="hidden">
+            <input name="clv0" type="hidden" value="N"><br>
+            <input type="checkbox" name="fulltext_checkbox" id="mobile-fulltext_checkbox_all"
+              onclick="limittoFullText(this.form)">
+            <label for="fulltext_checkbox_all" class="steely-ebsco-label"><span title="limit to full text online">Full
+                Text</span></label> -->
+            <!-- span style="display:none;" --><span>
+              <!-- Limiter: Scholarly/Peer-Reviewed -->
+              <!-- <input name="cli1" value="RV" type="hidden">
+              <input name="clv1" type="hidden" value="N">
+              <input name="scholarly_checkbox" id="mobile-scholarly_checkbox_articles" onclick="limittoScholarly(this.form)"
+                type="checkbox">
+              <label for="scholarly_checkbox_articles" class="steely-ebsco-label"><span
+                  title="limit to peer reviewed items">scholarly</span></label> -->
+            </span>
+            <span style="display:none;">
+              <!-- Limiter: Available in Library Collection -->
+              <input name="cli4" value="FT1" type="hidden">
+              <input name="clv4" type="hidden" value="Y">
+              <input type="checkbox" name="ailc_checkbox" id="mobile-ailc_articles_checkbox_all"
+                onclick="limittoAiLC(this.form)">
+              <label for="ailc_articles_checkbox_all" class="steely-ebsco-label"><span
+                  title="limit to Steely Library's holdings">at Steely</span></label>
+            </span>
+
+            <!-- Limiter: Catalog Only -->
+            <span style="display:none;">
+              <input name="cli2" value="FC" type="hidden"><input name="clv2" type="hidden" value="N">
+              <input name="catalog_only_checkbox" id="mobile-catalog_only_checkbox" onclick="limittoCatalog(this.form)"
+                type="checkbox">
+              <label for="catalog_only_checkbox" class="steely-ebsco-label"><span
+                  title="limit to Steely Library's catalog">catalog only</span></label>
+            </span>
+            <!-- Limiter: Institutional Repositories Only -->
+            <span style="display:none">
+              <input name="cli3" value="FC1" type="hidden">
+              <input name="clv3" type="hidden" value="N">
+              <input name="IR_only_checkbox" id="mobile-IR_only_checkbox" onclick="limittoIR(this.form)"
+                type="checkbox">
+              <label for="IR_only_checkbox" class="steely-ebsco-label"><span title="limit to Steely's IR">IR
+                  only</span></label>
+            </span>
+            <ul class="steely-searchbox-links-mobile">
+
+              <!-- span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank" href="http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=edsbooks&amp;mode=and&amp;lang=en&amp;authtype=guest">Guest</a></span -->
+
+              <li> <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s8992667&groupid=main&profid=eds&mode=and&lang=en&authtype=ip,guest">Guest</a></span>
+              </li>
+              <li> <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=eds&amp;mode=and&amp;lang=en&amp;authtype=ip,sso">Advanced</a></span>
+              </li>
+
+            </ul>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
+    <!-- TAB2 BOOKS ########################################################################################################## -->
+
+    <div class="nav-tab2 mobile-search-form hidden" id="mobile-nav-tab2" role="tabpanel" aria-labelledby="steely-nav-tab2" aria-hidden="true">
+      <form class="steely-external" action="https://search.ebscohost.com/login.aspx" method="get" target="_blank"
+        onsubmit="ebscoPreProcess(this)">
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">Books &amp; Media</legend>
+            <!-- Dropdown menu to prepend the selected value below to the user's search term -->
+            <!-- select onchange="#" size="1" name="search_prefix">
+					<option selected="selected" value="">keyword</option>
+					<option value="TI ">title</option>
+					<option value="AU ">author</option>
+				</select -->
+            <input name="direct" value="true" type="hidden">
+            <input name="scope" value="site" type="hidden">
+            <!-- target an EDS profile -->
+            <input name="site" value="eds-live" type="hidden">
+            <input name="profile" value="edsbooks" type="hidden">
+            <!-- Auth type -->
+            <input name="authtype" value="ip,sso" type="hidden">
+            <input name="custid" value="s8992667" type="hidden">
+            <input name="groupid" value="main" type="hidden">
+            <!-- search box and submit button -->
+
+            <input name="type" value="0" type="hidden"> <!-- basic = 0, advanced = 1, delete line = advanced -->
+
+            <input name="bquery" value="" type="hidden">
+            <span class="steely-eds-labels visuallyhidden">
+              <label for="ebsco_books_searchbox" class="steely-ebsco-label2">Search articles</label>
+            </span>
+
+            <div class="search-input-wrapper">
+              <div class="select-wrapper">
+
+                <select onchange="#" size="1" name="search_prefix" id="mobile-book_searchtype">
+                  <option selected="selected" value="">By Keyword</option>
+                  <option value="TI ">By Title</option>
+                  <option value="AU ">By Author</option>
+                </select>
+              </div>
+              <input name="uquery" size="30" id="mobile-ebsco_books_searchbox" type="text"
+                placeholder="Find books and media">
+              <input value="Search" type="submit">
+            </div>
+
+
+            <span class="steely-eds-labels">
+              <label for="book_searchtype" class="steely-ebsco-label2">Search books by:</label>
+            </span>
+
+
+            <!-- Limiter Check Boxes: To display, adjust the html comment tags at desired locations -->
+            <span style="display:none;">
+              <!-- Limiter: Full Text -->
+              <input name="cli0" value="FT" type="hidden">
+              <input name="clv0" type="hidden" value="N">
+              <!-- input type="checkbox" name="fulltext_checkbox" id="mobile-fulltext_checkbox_all" onclick="limittoFullText(this.form)" -->
+              <!-- label for="fulltext_checkbox_all" class="steely-ebsco-label">full text</label -->
+
+              <!-- Limiter: Available in Library Collection -->
+              <input name="cli4" value="FT1" type="hidden">
+              <input name="clv4" type="hidden" value="N">
+              <input type="checkbox" name="ailc_checkbox" id="mobile-ailc_checkbox_all"
+                onclick="limittoAiLC(this.form)">
+              <label for="ailc_checkbox_all" class="steely-ebsco-label">at Steely</label>
+
+              <!-- Limiter: Scholarly/Peer-Reviewed -->
+              <input name="cli1" value="RV" type="hidden">
+              <input name="clv1" type="hidden" value="N">
+              <input name="scholarly_checkbox" id="mobile-scholarly_checkbox_books"
+                onclick="limittoScholarly(this.form)" type="checkbox">
+              <label for="scholarly_checkbox_books" class="steely-ebsco-label"><span
+                  title="Peer-Reviewed">scholarly</span></label>
+            </span>
+            <!-- Limiter: Catalog Only -->
+            <span style="display:none">
+              <input name="cli2" value="FC" type="hidden">
+              <input name="clv2" type="hidden" value="N">
+              <input name="catalog_only_checkbox" id="mobile-catalog_books_only_checkbox"
+                onclick="limittoCatalog(this.form)" type="checkbox">
+              <label for="catalog_books_only_checkbox" class="steely-ebsco-label">catalog only</label>
+            </span>
+            <!-- Limiter: Institutional Repositories Only -->
+            <span style="display:none">
+              <input name="cli3" value="FC1" type="hidden">
+              <input name="clv3" type="hidden" value="N">
+              <input name="IR_only_checkbox" id="mobile-IR_book_only_checkbox" onclick="limittoIR(this.form)"
+                type="checkbox">
+              <label for="IR_book_only_checkbox" class="steely-ebsco-label">institutional repository only</label>
+            </span>
+            <ul class="steely-searchbox-links-mobile">
+              <!-- <li> <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank" href="http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=edsbooks&amp;mode=and&amp;lang=en&amp;authtype=guest">visitors</a></span> </li> -->
+              <li> <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank"
+                    href="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s8992667&groupid=main&profid=edsbooks&mode=and&lang=en&authtype=ip,guest">Guest</a></span>
+              </li>
+              <li> <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank"
+                    href="
+			https://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profid=edsbooks&amp;mode=and&amp;lang=en&amp;authtype=ip,sso">advanced
+                  </a></span> </li>
+
+            </ul>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
+    <!-- TAB3 Journals ########################################################################################################## -->
+    <div class="nav-tab3 mobile-search-form hidden" id="mobile-nav-tab3" role="tabpanel" aria-labelledby="steely-nav-tab3" aria-hidden="true">
+      <form class="steely-external" action="https://search.ebscohost.com/login.aspx" method="get" target="_blank"
+        onsubmit="ebscoPreProcess(this)">
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">eJournal Titles</legend>
+            <!-- Dropdown menu to prepend the selected value below to the user's search term -->
+            <!-- select onchange=" #" size="1" name="search_prefix">
+              <option selected="selected" value="">keyword</option>
+              <option value="SO ">title</option>
+              <option value="IS ">issn</option>
+              <option value="IB ">isbn</option>
+              </select -->
+            <input name="direct" value="true" type="hidden">
+            <input name="scope" value="site" type="hidden">
+            <!-- input name="mode" value="bool" type="hidden" -->
+            <input name="type" value="44" type="hidden">
+            <!-- target an EDS profile -->
+            <input name="site" value="pfi-live" type="hidden">
+            <input name="profile" value="eds" type="hidden">
+            <!-- input name="plp" value="1" type="hidden" -->
+            <input name="db" value="edspub" type="hidden">
+            <!-- Auth type -->
+            <input name="authtype" value="ip,sso" type="hidden">
+            <input name="custid" value="s8992667" type="hidden">
+            <input name="groupid" value="main" type="hidden">
+            <input name="ssl" value="Y" type="hidden">
+            <!-- search box and submit button -->
+            <input name="bquery" value="" type="hidden">
+            <span class="steely-eds-labels visuallyhidden">
+              <label for="ebsco_journals_searchbox" class="steely-ebsco-label2">Search ejournals</label>
+            </span>
+            <span class="steely-eds-labels visuallyhidden">
+              <label for="journal_searchtype" class="steely-ebsco-label2">Search ejournals by:</label>
+            </span>
+
+            <div class="search-input-wrapper">
+              <div class="select-wrapper">
+
+                <select onchange="#" size="1" name="search_prefix" id="mobile-journal_searchtype">
+                  <option selected="selected" value="">By Keyword</option>
+                  <option value="SO ">By Title</option>
+                  <option value="IS ">By ISSN</option>
+                  <option value="IB ">By ISBN</option>
+                </select>
+              </div>
+              <input name="uquery" size="30" id="mobile-ebsco_journals_searchbox" type="text"
+                placeholder="Find journals">
+              <input value="Search" type="submit">
+            </div>
+
+
+
+            <ul class="steely-searchbox-links-mobile">
+              <li> <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank"
+                    href=" https://search.ebscohost.com/login.aspx?authtype=ip,guest&custid=s8992667&groupid=main&direct=true&db=edspub&profile=eds&plp=1">Guest</a></span>
+              </li>
+              <!-- li> <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank" href="http://search.ebscohost.com/login.aspx?profile=pfi&amp;authtype=ip,guest">Advanced</a></span> </li -->
+              <!-- <li> <span class="steely-ebsco-advanced-mobile"><a class="steely-external" target="_blank" href="http://proxy1.nku.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=1&amp;custid=s8992667&amp;groupid=main&amp;profile=pfi&amp;mode=and&amp;lang=en&amp;authtype=ip,guest">Advanced</a></span> </li> -->
+
+            </ul>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+    <!-- TAB5 Journals ########################################################################################################## -->
+    <div class="nav-tab5 mobile-search-form hidden" id="mobile-nav-tab5" role="tabpanel" aria-labelledby="steely-nav-tab5" aria-hidden="true">
+      <form class="steely-external" action="/library-new/search.html">
+        <div class="steely-ebsco-fieldset">
+          <fieldset>
+            <legend class="visuallyhidden">Steely Site Search</legend>
+            <div class="search-input-wrapper">
+              <input name="q" size="30" id="mobile-ebsco_journals_searchbox" type="text" placeholder="Search Steely">
+              <input value="Search" type="submit">
+            </div>
+
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+<!-- TABS END ########################################################################################################-->
+
+<script>
+  $(() => {
+    $('#mobile-search-select').change((e) => {
+      var id = $(e.target).val();
+      $('.mobile-search-form:not(#' + id + ')').addClass('hidden');
+      $('#' + id).removeClass('hidden');
+    });
+  });
+</script>

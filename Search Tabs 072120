@@ -645,7 +645,7 @@
     </div>
     <!-- TAB5 Steely Site ########################################################################################################## -->
     <div class="nav-tab5 mobile-search-form hidden" id="mobile-nav-tab5" role="tabpanel" aria-labelledby="steely-nav-tab5" aria-hidden="true">
-      <form class="steely-external" action="/library-new/search.html">
+     <form class="steely-external" action="/content/inside/library-new/search.html" target="_blank">
         <div class="steely-ebsco-fieldset">
           <fieldset>
             <legend class="visuallyhidden">Steely Site Search</legend>
